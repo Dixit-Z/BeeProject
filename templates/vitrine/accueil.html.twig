@@ -1,0 +1,41 @@
+{% extends 'layout.html.twig' %}
+
+
+{% block title %}{{ parent() }} - Bienvenue{% endblock %}
+{% block body %}
+<div class="main-container container">
+  <div class="contact-block col-sm-3 col-md-3 col-lg-3">
+    {{ include('vitrine/contact.html.twig') }}
+  </div>
+  <div class="col-sm-8 col-md-8 col-lg-8 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+     {{ luckyNumber }}
+<hr>
+<div class="row">
+<div class="image-wrap">
+  <img src="{{ asset('images/logosanstxt.PNG') }}" height="80%" alt="logo" />
+</div>
+<div class="citation-wrap">
+  <i>Si l'abeille disparaissait de la
+surface du globe, l'homme n'aurait plus que quatre
+années à vivre</i>
+  <br>
+   - <strong>Albert Einstein</strong>
+</div>
+</div>
+<hr>
+<div class="row">
+<h1>Présentation</h1>
+<p>Avec la SARL Fremin, basée à Cantiers, nous vous
+proposons de faire un geste environnemental
+favorisant la biodiversité. En effet, via la production
+d’un produit sain et local : du miel d’abeilles
+Normand vous participerez au développement d’une
+PME locale ainsi qu’à la lutte contre la disparition
+des abeilles. Peut importe le temps et la place que
+vous pouvez y consacrez, vous trouverez au sein de
+nos trois formules, des solutions qui vous
+conviendront. </p>
+</div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'layout.html.twig' %}
+{% block body %}
+<div class="main-container container">
+  <div class="formule-title">
+    <h1> Nos formules </h1>
+  </div>
+  <div class="col-sm-4 col-lg-4 col-md-4">
+{{ include('vitrine/formule_template.html.twig', {titre_formule: 'parrainage', numero_formule: 'formule_1'}) }}
+</div>
+<div class="col-sm-4 col-lg-4 col-md-4">
+{{ include('vitrine/formule_template.html.twig', {titre_formule: 'clef en main', numero_formule: 'formule_2'}) }}
+</div>
+<div class="col-sm-4 col-lg-4 col-md-4">
+{{ include('vitrine/formule_template.html.twig', {titre_formule: 'débutant', numero_formule: 'formule_3'}) }}
+</div>
+</div>
+{% endblock %}

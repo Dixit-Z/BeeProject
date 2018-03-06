@@ -1,0 +1,11 @@
+<div class="formule-title">
+<h3> Formule {{ titre_formule }}</h3>
+</div>
+
+{% if numero_formule is same as("formule_1") %}
+{{ include('vitrine/formules/formule_parrainage.html.twig') }}
+{% elseif numero_formule is same as("formule_2") %}
+{{ include('vitrine/formules/formule_clef_en_main.html.twig') }}
+{% elseif numero_formule is same as("formule_3") %}
+{{ include('vitrine/formules/formule_debutant.html.twig') }}
+{% endif %}

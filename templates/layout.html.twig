@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{ asset('favicon3.ico') }}" />
+    <link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
+    <script src="{{ asset('build/js/app.js') }}"></script>
+    <title>{% block title %} Adopte une ruche normande {% endblock %}</title>
+  </head>
+
+  <body>
+
+    <nav class="top-bar">
+        <div class="row">
+        <div class="col-sm-6 hidden-xs">
+
+            <span class="nav-text">
+                <i class="fa fa-phone" aria-hidden="true"></i>  {{ numero_telephone_portable }}
+                <i class="fa fa-envelope" aria-hidden="true"></i> {{ adresse_email }}</span>
+        </div>
+        <div class="col-sm-6 text-right">
+            <a target="_blank" href="{{ facebook_url }}" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a target="_blank" href="{{ twitter_url }}" class="social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a target="_blank" href="{{ instagram_url }}" class="social"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a target="_blank" href="{{ youtube_url }}" class="social"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+            <a target="_blank" href="{{ google_url }}" class="social"><i class="fa fa-google" aria-hidden="true"></i></a>
+            </div>
+      </div>
+    </nav>
+
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+      <ul class="nav navbar-nav">
+        <li class="{% if app.request.attributes.get('_route') == 'mainPage' %}active{% endif %}"><a href="{{ path('mainPage') }}">Adopte une ruche normande</a></li>
+        <li class="{% if app.request.attributes.get('_route') == 'concept' %}active{% endif %}"><a href="{{ path('concept') }}">Le concept</a></li>
+        <li class="{% if app.request.attributes.get('_route') == 'adopt' %}active{% endif %}"><a href="{{ path('adopt') }}">Adoptez votre ruche</a></li>
+        <li class="{% if app.request.attributes.get('_route') == 'who' %}active{% endif %}"><a href="{{ path('who') }}">Qui sommes-nous ?</a></li>
+      </ul>
+    </nav>
+    {% block body %}
+    {% endblock %}
+    <footer class="footer">
+    <div class="container">
+        <div class="row" >
+        <div class="col-sm-4">
+            <h4 class="title">Adopte une ruche normande</h4>
+            <p>Choisir adopte une ruche normande c'est choisir une nouvelle culture. Une nouvelle façon de s'intégrer dans le monde écologique de demain.</p>
+            <ul class="social-icon">
+              <a target="_blank" href="{{ facebook_url }}" class="social"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+              <a target="_blank" href="{{ twitter_url }}" class="social"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+              <a target="_blank" href="{{ instagram_url }}" class="social"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              <a target="_blank" href="{{ youtube_url }}" class="social"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+              <a target="_blank" href="{{ google_url }}" class="social"><i class="fa fa-google" aria-hidden="true"></i></a>
+            </ul>
+            </div>
+        <div class="col-sm-4">
+            <h4 class="title">Mots clefs</h4>
+            <div class="category">
+            <a href="#">bees</a>
+            <a href="#">ruche</a>
+            <a href="#">eco-responsabilité</a>
+            </div>
+            </div>
+        <div class="col-sm-4">
+            <h4 class="title">Méthodes de paiement</h4>
+            <p>Ces méthodes de paiement sont disponibles en rendez-vous ou directement sur le site.</p>
+            <ul class="payment">
+            <li><a href="#"><i class="fa fa-cc-amex" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-credit-card" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-paypal" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-cc-visa" aria-hidden="true"></i></a></li>
+            </ul>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row text-center"> © 2018. Made  by Bruno Trinta.</div>
+        </div>
+
+
+    </footer>
+
+  </body>
+
+
+
+
+</html>

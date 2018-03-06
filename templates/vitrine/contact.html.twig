@@ -1,0 +1,26 @@
+<section id="contact" class="content-section text-center">
+        <div class="contact-section">
+            <div class="col-md-10">
+              <div class="row">
+                <div class="col-md-offset-2">
+                  <h2>Nous contacter</h2>
+                  <form id="contact-form" class="form-horizontal" action=" {{ path('sendMail') }}" method="POST">
+                    <div class="form-group">
+                      <label for="organisation">Nom ou organisation</label>
+                      <input type="text" class="form-control" id="organisation" name="organisation" placeholder="Mairie de l'Haye du puits">
+                    </div>
+                    <div class="form-group">
+                      <label for="mail">Email</label>
+                      <input type="email" class="form-control" id="mailContact" name="mailContact" placeholder="haye-du-puits-mairie@gmail.com">
+                    </div>
+                    <div class="form-group">
+                      <label for="message">Message</label>
+                     <textarea class="form-control" name="description" placeholder="Votre message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-default">Envoyer</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+        </div>
+</section>
