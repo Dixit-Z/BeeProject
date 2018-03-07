@@ -36,6 +36,7 @@
         <li class="{% if app.request.attributes.get('_route') == 'mainPage' %}active{% endif %}"><a href="{{ path('mainPage') }}">Adopte une ruche normande</a></li>
         <li class="{% if app.request.attributes.get('_route') == 'concept' %}active{% endif %}"><a href="{{ path('concept') }}">Le concept</a></li>
         <li class="{% if app.request.attributes.get('_route') == 'adopt' %}active{% endif %}"><a href="{{ path('adopt') }}">Adoptez votre ruche</a></li>
+        <li class="{% if app.request.attributes.get('_route') == 'blog' %}active{% endif %}"><a href="{{ path('blog') }}">Le blog</a></li>
         <li class="{% if app.request.attributes.get('_route') == 'who' %}active{% endif %}"><a href="{{ path('who') }}">Qui sommes-nous ?</a></li>
       </ul>
     </nav>

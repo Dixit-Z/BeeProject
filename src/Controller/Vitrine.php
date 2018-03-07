@@ -14,13 +14,6 @@ class Vitrine extends Controller
     public function mainPage(LoggerInterface $logger)
     {
         $number = mt_rand(0, 100);
-
-        // $logger->err('I generated a number '.$number);
-        // $logger->err('I generated a numbere ');
-        // $logger->info('I generated a number ');
-        // $logger->debug('I generated a numberd ');
-        // return new Response(
-        //     '<html><body>Lucky number: '.$number.'</body></html>');
         return $this->render('vitrine/accueil.html.twig', ['luckyNumber' => $number]);
     }
 

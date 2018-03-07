@@ -1,21 +1,26 @@
 <?php
 namespace App\Controller;
 
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Psr\Log\LoggerInterface;
 
 class ConnexionController extends Controller
 {
     /**
-    * @Route("/admin", name="connexion")
+    * @Route("/login", name="login")
     */
-    public function mainPage(LoggerInterface $logger)
+    public function login(Request $request, AuthenticationUtils $authUtils)
     {
-        $number = mt_rand(0, 100);
+      // get the login error if there is one
+      $error = $authUtils->getLastAuthenticationError();
 
-        return $this->render('vitrine/accueil.html.twig', ['luckyNumber' => $number]);
+      // last username entered by the user
+      $lastUsername = $authUtils->getLastUsername();
+
+      return $this->render('login.html.twig', array('error'=>$error));
     }
 
 }
